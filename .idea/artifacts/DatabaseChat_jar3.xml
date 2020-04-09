@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DatabaseChat:jar3">
+    <output-path>$PROJECT_DIR$/out/artifacts/DatabaseChat_jar3</output-path>
+    <root id="archive" name="DatabaseChat.jar">
+      <element id="module-output" name="DatabaseChat" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
