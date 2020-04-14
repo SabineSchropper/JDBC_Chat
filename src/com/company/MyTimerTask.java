@@ -24,13 +24,16 @@ public class MyTimerTask extends TimerTask {
             rs.next();
             id = rs.getInt(1);
             if(idBefore != id) {
-                String sql1 = "SELECT * FROM chat WHERE id = " + id+ " AND user_id != " + userId + "";
+                String sql1 = "SELECT chat.note, users.user_name FROM chat INNER JOIN users ON chat.user_id = users.user_id ";
+                sql1 = sql1 + "WHERE id = "+ id+ "  AND chat.user_id != " + userId + "";
                 ResultSet rs1 = statement.executeQuery(sql1);
                 while (rs1.next()) {
                     String note = rs1.getString("note");
-                    System.out.println(note);
+                    String name = rs1.getString("user_name");
+                    System.out.println(name + ": "+ note);
                 }
             }
+            connection.close();
         } catch (SQLException ex) {
             ex.fillInStackTrace();
         }
