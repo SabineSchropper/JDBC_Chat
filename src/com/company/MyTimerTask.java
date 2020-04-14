@@ -24,7 +24,7 @@ public class MyTimerTask extends TimerTask {
             rs.next();
             id = rs.getInt(1);
             if(idBefore != id) {
-                String sql1 = "SELECT * FROM chat WHERE id = " + id + " AND user_id != " + userId + "";
+                String sql1 = "SELECT * FROM chat WHERE id = " + id+ " AND user_id != " + userId + "";
                 ResultSet rs1 = statement.executeQuery(sql1);
                 while (rs1.next()) {
                     String note = rs1.getString("note");
